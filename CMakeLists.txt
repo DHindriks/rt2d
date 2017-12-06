@@ -152,6 +152,8 @@ IF(MAKE_START)
 		start/myentity.h
 		start/myscene.cpp
 		start/myscene.h
+		start/player.cpp
+		start/player.h
 	)
 	target_link_libraries(start
 		${ALL_GRAPHICS_LIBS}

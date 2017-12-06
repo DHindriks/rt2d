@@ -19,9 +19,13 @@ MyScene::MyScene() : Scene()
 	myentity = new MyEntity();
 	myentity->position = Point2(SWIDTH/2, SHEIGHT/2);
 
+	player = new Player();
+	player->position = Point2(SWIDTH / 4, SHEIGHT / 4);
+
 	// create the scene 'tree'
 	// add myentity to this Scene as a child.
 	this->addChild(myentity);
+	this->addChild(player);
 }
 
 
@@ -29,9 +33,11 @@ MyScene::~MyScene()
 {
 	// deconstruct and delete the Tree
 	this->removeChild(myentity);
+	this->removeChild(player);
 
 	// delete myentity from the heap (there was a 'new' in the constructor)
 	delete myentity;
+	delete player;
 }
 
 void MyScene::update(float deltaTime)

@@ -8,8 +8,8 @@
 
 MyEntity::MyEntity() : Entity()
 {
-	this->addSprite("assets/spaceship.tga");
-	this->sprite()->color = BLUE;
+	this->addSprite("assets/square.tga");
+	this->sprite()->color = RED;
 }
 
 MyEntity::~MyEntity()
